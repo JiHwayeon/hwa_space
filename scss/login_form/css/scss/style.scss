@@ -1,0 +1,66 @@
+
+/* Google Web Font */
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500&display=swap');
+
+* {
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+  }
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+  }
+  
+  /* Login Form */
+ form {
+    width: 350px;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    h1 {
+      font-weight: normal;
+      text-align: center;
+      font-size: 28px;
+      margin-top: 0;
+    }
+    input:not([type="submit"]){
+      display: block;
+      width: 100%;
+      margin: 15px 0;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      outline: none;
+      transition: 0.35s;
+      padding-left: 35px;
+      &[type="text"] {
+        background: url(../images/person_FILL0_wght400_GRAD0_opsz24.png) no-repeat center left 5px;
+      }
+      &[type="password"] {
+        background: url(../images/lock_FILL0_wght400_GRAD0_opsz24.png) no-repeat center left 5px;
+      }
+      &[type="email"] {
+        background: url(../images/mail_FILL0_wght400_GRAD0_opsz24.png) no-repeat center left 5px;
+      }
+      &:hover {
+        border: 1px solid skyblue;
+        box-shadow: 0 0 5px skyblue;
+      }
+    }
+    input[type="submit"] {
+      background-color: skyblue;
+      border: none;
+      width: 100%;
+      padding: 12px;
+      color: #fff;
+      cursor: pointer;
+      &:hover {
+        background-color: #000;
+      }
+    }
+    /* button {
+      background-color: red;
+    } */
+  }

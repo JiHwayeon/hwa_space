@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons+Outlined');
+
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+}
+// Checkbox Icons Variables
+$icon-box-size: 100px;
+$icon-color:#74b9ff;
+.icon{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(3, 1fr);
+    gap: $icon-box-size / 5;
+    li{
+        input[name=check-item]{
+            display: none;
+            &:checked + div{
+                border: none;
+                box-shadow: 0 0 ($icon-box-size / 10) transparentize($icon-color, 0.5),
+                            0 0 ($icon-box-size / 6.66) transparentize($icon-color, 0.5),
+                            0 0 ($icon-box-size / 5) transparentize($icon-color, 0.5),
+                            inset 0 0 ($icon-box-size / 33.33) $icon-color;
+            }
+            &:checked + div span{
+                text-shadow: 0 0 ($icon-box-size / 10) $icon-color,
+                            0 0 ($icon-box-size / 6.66) $icon-color,
+                            0 0 ($icon-box-size / 5) $icon-color
+            }
+        }
+        label{
+            cursor: pointer;
+            div{
+                color: #fff;
+                border: ($icon-box-size / 50) solid #333;
+                background-color: #222;
+                border-radius: ($icon-box-size / 10);
+                width: $icon-box-size;
+                height: $icon-box-size;
+                display: grid;
+                justify-content: center;
+                align-items: center;
+                transition: 0.5s;
+                span{
+                    font-size: $icon-box-size / 2;
+                    font-weight: 100;
+                    transition: 0.5s;
+                }
+            }
+        }
+        
+    }
+
+    }
