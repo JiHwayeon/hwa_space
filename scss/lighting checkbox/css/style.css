@@ -1,0 +1,63 @@
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons+Outlined");
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  /* height: 100vh; */
+  /* background-color: #000; */
+}
+h1{
+  color: aliceblue;
+  font-weight: normal;
+  text-align: center;
+  font-size: 28px;
+  height: 15px;
+  align-self: end;
+}
+.icon {
+  padding: 0;
+  margin: 15%;
+  list-style: none;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.icon li input[name=check-item] {
+  display: none;
+}
+.icon li input[name=check-item]:checked + div {
+  border: none;
+  box-shadow: 0 0 10px rgba(116, 185, 255, 0.5), 0 0 15.015015015px rgba(116, 185, 255, 0.5), 0 0 20px rgba(116, 185, 255, 0.5), inset 0 0 3.00030003px #74b9ff;
+}
+.icon li input[name=check-item]:checked + div span {
+  text-shadow: 0 0 10px #74b9ff, 0 0 15.015015015px #74b9ff, 0 0 20px #74b9ff;
+  color: #fff;
+}
+.icon li label {
+  color: #fff;
+  cursor: pointer;
+}
+.icon li label div {
+  border: 2px solid #fff;
+  background-color: #fff;
+  border-radius: 10px;
+  width: 100px;
+  height: 100px;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s;
+}
+.icon li label div span {
+  color: #9f9e9e;
+  font-size: 50px;
+  font-weight: 100;
+  transition: 0.5s;
+}

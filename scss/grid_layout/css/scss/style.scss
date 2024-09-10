@@ -1,0 +1,155 @@
+/* Google Web Font */
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500&display=swap');
+
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700,900&display=swap');
+
+@import "reset";
+@import "mixins";
+@import "map-get-array";
+
+/* Default CSS */
+body{
+    font-family: map-get($font-family, kor);
+    color:map-get($font-color, primary);
+    font-size: map-get($font-size, base);
+    background-color: map-get($bg-color, primary);
+    font-weight: 300;
+    line-height: 1.5em;
+    margin: 0;
+}
+section.portfolio{
+    background: url(../images/background.png) no-repeat top center;
+    height: 100vh;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    h1{
+        @include wave-underline;
+        font-size: map-get($font-size, largy-heading);
+        font-family: map-get($font-family, eng);
+        text-align: center;
+        margin-bottom: 150px;
+
+      }
+    .items{
+        width: 1280px;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 30px;
+        .item{
+            &.thum{
+                .photo{
+                    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.15);
+                    border-radius: 15px;
+                    width: 100%;
+                    height: 400px;
+                    overflow: hidden;
+                    img{
+                        width: inherit;
+                        height: inherit;
+                        object-fit: cover;
+                        object-position: top;
+                        transition: 2s;
+                    }
+                }
+                &:hover img{
+                    object-position: bottom;
+
+                }
+                .portfolio-title{
+                    display: block;
+                    padding:10px 15px;
+                    font-family: map-get($font-family, eng);
+                    .btn-view{
+                        @include btn-view ;
+                        &.pc{
+                            background-color: crimson
+                        }
+                        &.mobile{
+                            background-color: royalblue;
+
+                    }
+
+                    }
+                }
+
+            }
+        }    
+
+    }
+    aside.item{
+        b{
+            color:#e84393;
+            font-family: map-get($font-family, eng);
+        }
+        h2{
+            margin-top: 10px;
+            font-family: map-get($font-family, eng);
+        }
+        .info{
+            padding-left: 20px;
+            line-height: 1.8em;
+            span{
+                display: list-item;
+            }  
+        }
+    }   
+}
+/*Tablet BreakPoint*/
+@media (min-width:768px) and (max-width:1366px) {
+    section.portfolio{
+        height: auto;
+        align-content: start;
+        padding: 20px;       
+        h1{
+            font-size: map-get($font-size, medium-heading);
+          }
+        .items{
+            width: 100%;
+            grid-template-columns: repeat(2, 1fr);
+        aside.item,
+        .item.thum:nth-of-type(3){
+            grid-column: span 2;
+        }  
+        }  
+    }
+}
+/*Mobile BreakPoint*/
+@media (max-width:768px) {
+    section.portfolio{
+        height: auto;
+        align-content: start;
+        padding: 20px;       
+        h1{
+            font-size: map-get($font-size, small-heading);
+            margin-bottom: 50px;
+            text-underline-offset: 15px;
+          }
+        .items{
+            width: 100%;
+            grid-template-columns: repeat(1, 1fr);
+        }  
+    }
+}
+/*Featherlight Custom CSS*/
+.featherlight-iframe .featherlight-content{
+    width: 100%;
+    margin-left: 0 ;
+    margin-right: 0;
+    max-height: 100% !important;
+    height: 100%;
+}
+.featherlight .featherlight-inner {
+    width: 100%;
+    height: 100%;
+}
+.featherlight .featherlight-close-icon {
+    top: 90%;
+    right: 95%;
+    background-color: crimson;
+    border-radius: 50%;
+    color: #fff;
+    width: 35px;
+    line-height: 35px;
+    font-size: 20px;
+}

@@ -1,0 +1,14 @@
+//mixins
+@mixin wave-underline{
+    text-decoration-style: wavy;
+    text-decoration-color: #e84393;
+    text-decoration-line: underline;
+    text-decoration-thickness: 3px;
+    text-underline-offset: 35px ;
+}
+@mixin btn-view{
+    font-size: map-get($font-family, base);
+    padding:5px ;
+    border-radius: 5px;
+    color:#fff
+}

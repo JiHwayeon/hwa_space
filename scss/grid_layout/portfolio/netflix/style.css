@@ -1,0 +1,367 @@
+/* XEICON CDN  */
+@import url('http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css');
+
+/* Google Web Font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap');
+
+/* XEICON CDN  */
+@import url('http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css');
+
+* {
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  background-color: #000;
+  color: #fff;
+  font-size: 26px;
+  margin: 0;
+  line-height: 1.6em;
+}
+body.active {
+  overflow: hidden;
+}
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+header {
+/*  height: 90px;*/
+  overflow: hidden;
+  padding: 15px 55px;
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  box-sizing: border-box;
+}
+.logo {
+  float: left;
+  padding-top: 10px;
+}
+.logo img {
+  width: 170px;
+}
+.signin {
+  float: right
+}
+.signin button {
+  background-color: crimson;
+  border: none;
+  font-size: 18px;
+  color: #fff;
+  padding: 7px 15px;
+  border-radius: 5px;
+  text-transform: capitalize;
+  cursor: pointer;
+}
+
+/* Common CSS */
+section {
+  border-bottom: 10px solid #333;
+  position: relative;
+}
+.getstarted {
+  position: relative;
+  display: inline-block;
+}
+.getstarted input,
+.getstarted button {
+  height: 60px;
+  outline: none;
+  border: none;
+  vertical-align: middle;
+}
+.getstarted input[type=email] {
+  width: 450px;
+  margin-right: -5px;
+  padding-top: 10px;
+  padding-left: 10px;
+  box-sizing: border-box;
+}
+.getstarted button {
+  width: 220px;
+  background-color: crimson;
+  color: #fff;
+  font-size: 26px;
+  cursor: pointer;
+}
+.getstarted input[type=email] + span {
+  color: #999;
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  transition: 0.25s;
+  pointer-events: none;
+  font-size: 16px;
+}
+.getstarted input[type=email]:focus + span {
+  font-size: 14px;
+  color: #555;
+  transform: translateY(-15px);
+  font-weight: bold;
+}
+
+/* Section : welcome */
+.welcome {
+  height: 80vh;
+  background: url(images/welcome-backgroun.jpg) no-repeat center center;
+  background-size: cover;
+}
+.welcome:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.heading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 800px;
+}
+.heading h1 {
+  font-size: 64px;
+  line-height: 1.2em;
+  margin: 0;
+}
+.heading h5 {
+  font-weight: normal;
+  margin: 0;
+}
+.heading {
+  font-size: 20px;
+}
+
+/* Sectoin : enjoy */
+.enjoy,
+.download,
+.watch,
+.create{
+  height: 500px;
+}
+.inner {
+  /*border: 1px solid #fff;*/
+  width: 1150px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+}
+.inner > div {
+  float: left;
+  width: 50%;
+}
+.desc {
+  padding-top: 40px;
+}
+.desc h2 {
+  font-size: 50px;
+  line-height: 1.2em;
+}
+.preview {
+  text-align: center;
+}
+.preview img {
+  height: 350px;
+}
+
+/* Section : faq */
+.faq {
+  padding: 80px 0;
+}
+.faq .inner {
+  width: 815px;
+  position: static;
+  transform: translate(0, 0);
+  margin: auto;
+}
+.faq h1 {
+  text-align: center;
+  font-size: 50px;
+}
+.accordion {}
+input[name=faq] {
+  display: none;
+}
+input[name=faq] + label {
+  display: block;
+  background-color: #303030;
+  padding: 15px;
+  margin-bottom: 1px;
+  cursor: pointer;
+}
+input[name=faq] + label em {
+  width: 30px;
+  height: 30px;
+  float: right;
+  margin-right: 10px;
+  margin-top: 3px;
+  position: relative;
+  transition: 0.35s
+}
+input[name=faq] + label em:before,
+input[name=faq] + label em:after {
+  content: '';
+  width: 100%;
+  height: 2px;
+  background-color: #fff;
+  position: absolute;
+  left: 0;
+  top: 50%;
+}
+input[name=faq] + label em:after {
+  transform: rotate(90deg);
+}
+.faq-content {
+  background-color: #303030;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+/*  display: none;*/
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s;
+}
+.faq aside {
+  text-align: center;
+}
+.faq aside p {
+  font-size: 22px;
+}
+
+/* FAQ Checked Function */
+input[name=faq]:checked + label + .faq-content {
+  /*display: block;*/
+  max-height: 600px;
+  padding: 15px;
+}
+input[name=faq]:checked + label em {
+  transform: rotate(45deg);
+}
+
+/* footer */
+footer {
+  padding: 50px 0;
+  font-size: 12px;
+  color: rgb(128, 128, 128);
+  line-height: 1.5em;
+}
+.footer-inner {
+  width: 850px;
+  margin: auto;
+}
+.sitemap {
+  border-bottom: 1px solid #111;
+  padding-bottom: 20px;
+}
+.sitemap h6 {
+  font-size: 16px;
+  font-weight: normal;
+}
+.links ul li a {
+  color: rgb(128, 128, 128);
+}
+.links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: inline-block;
+  width: 24%;  
+}
+.links ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Modal Login */
+.modal-login {
+  background-color: rgba(0, 0, 0, 0.7);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.5s;
+  z-index: 10000;
+}
+.modal-login.active {
+  opacity: 1;
+  visibility: visible;
+}
+.login {
+  position: absolute;
+  width: 450px;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 60px 40px;
+  box-sizing: border-box;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 15px;
+  font-weight: 300;
+  color: #777;
+}
+.login h1 {
+  color: #fff;
+}
+.btn-close {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  font-size: 40px;
+  color: #999;
+  cursor: pointer;
+}
+.login input[type=text],
+.login input[type=password] {
+  background-color: #333333;
+  font-size: 16px;
+  padding: 20px 15px;
+  width: 100%;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  box-sizing: border-box;
+  outline: none;
+}
+.login input[type=button] {
+  font-size: 16px;
+  padding: 13px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  width: 100%;
+  background-color: #E50914;
+  font-size: 20px;
+  cursor: pointer;
+}
+.save-info {
+  overflow: hidden;
+}
+.save-info label {
+  float: left;
+}
+.save-info a {
+  float: right;
+  color: #fff;
+}
+.login p {
+  line-height: 1.6em;
+}
+.login p a {
+  color: dodgerblue;
+}
+.login a:hover {
+  text-decoration: underline;
+}
+

@@ -1,0 +1,141 @@
+/* Mobile Layout */
+@media (max-width: 768px) {
+  /* Common CSS */
+  section.welcome {
+    padding: 0 20px;
+  }
+  .inner {
+    width: 100%;
+  }
+  .inner > div {
+    float: none;
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+  }
+  section.feature {
+    padding: 25px 0;
+  }
+  .photo {
+    text-align: center;
+  }
+  .photo img {
+    width: 100%;
+  }
+  .desc {
+    padding: 0;
+  }
+  .desc h1 {
+    line-height: 1.5em;
+    font-size: 28px;
+  }
+  section.smart .inner,
+  section.edit .inner {
+    display: flex;
+    flex-direction: column;
+  }
+  section.smart .inner .desc,
+  section.edit .inner .desc {
+    order: 1;
+  }
+  section.smart .inner .photo,
+  section.edit .inner .photo {
+    order: 2;
+  }
+
+  /* Section : Welcome */
+  .heading h1 {
+    font-size: 26px;
+  }
+  .download-content span,
+  .statics {
+    display: none;
+  }
+  .next-section {
+    transform: translateX(-50%) scale(0.8);
+    bottom: 25px;
+  }
+
+  /* Header */
+  .heading {
+    width: 90%;
+  }
+  header {
+    padding: 0 10px;
+  }
+  header .btn-download {
+    width: 150px;
+    
+  }
+
+  /* Section : CallAction */
+  section.callaction {
+    background-image: url(images/download-bg-mobile.svg);
+  }
+  .callaction-inner {
+    width: 90%;
+  }
+  section.callaction h1 {
+    font-size: 23px;
+  }
+
+  /* Footer */
+  .footer-inner {
+    width: 100%;
+    padding: 0 20px;
+  }
+  
+  .sns-outer {
+    border-bottom: none;
+  }
+
+  /* sitemap */
+  .sitemap {
+    padding: 0;
+  }
+  .link-item {
+    float: none;
+    width: 100%;
+  }
+  .link-item-title {
+    padding: 20px 0;
+    border-bottom: 1px solid #ddd;
+    position: relative;
+    pointer-events: all;
+  }
+  .link-item-title:before {
+    content: '\e942';
+    font-family: xeicon;
+    font-weight: bold;
+    font-size: 20px;
+    position: absolute;
+    right: 10px;
+    transition: 0.35s;
+  }
+  .link-item-title.active:before {
+    transform: rotate(180deg)
+  }
+  .link-item:first-child .link-item-title {
+    border-top: 1px solid #ddd;
+  }
+  .link-item:last-child .link-item-title {
+    border-bottom: none;
+  }
+  .link-item-content {
+    display: none;
+    line-height: 3em;
+  }
+  
+  .logo-footer,
+  .policy,
+  .language {
+    float: none;
+    text-align: center;
+  }
+  .policy {
+    margin-bottom: 20px;
+  }
+  .policy a {
+    font-size: 14px;
+  }
+}
